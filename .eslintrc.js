@@ -12,6 +12,13 @@ module.exports = {
   },
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off'
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+    'vue/no-static-inline-styles': ["error", {
+      "allowBinding": false
+    }],
+    'vue/no-duplicate-attributes': ["error", {
+      "allowCoexistClass": false,
+      "allowCoexistStyle": true
+    }]
   }
 }
